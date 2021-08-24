@@ -1,0 +1,17 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+
+.heading{
+  color: rgb(238 ,125 ,59);
+  text-align: center;
+  text-transform: capitalize;
+  font-size: bold;
+  font-style: oblique;
+  margin: 5px 0px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.image_div{
+  width: auto;
+  height: auto;
+  margin: auto;
+}

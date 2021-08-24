@@ -1,0 +1,35 @@
+Reffer index6.js, Heading.jsx,OrderList.jsx,Parag.js,APp.jsx
+
+What is component?
+
+>> 
+a) component is a core building blocks of React.
+b) A component return a JSX that tells what should be render on the screen
+c) whenever you create a component write the file name in with start capital letter.
+
+eg:
+
+Heading.jsx
+
+Basic syntax to create a component.
+
+1) create Heading.jsx file.
+2) write below code.
+
+import React from 'react'
+
+function Heading(){
+    return <h1>My name is mukund</h1>
+}
+
+
+export default Heading;
+
+
+d) To keep index.js clean and simple we use App.jsx.In App.jsx we export all other component and finally we export App.jsx in main index.js file.
+
+
+There are 2 type of component.
+-----------------------------------
+1) Function component.
+2) Class component.

@@ -1,0 +1,43 @@
+HTML attribute:
+----------------
+In HTML we pass attribute in elements.
+
+Example.
+
+<a href=""></a>
+
+It is angular tag and href is an atributes.
+
+Same way we have JSX attributes.
+----------------------------------
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+const d = new Date();
+
+ReactDOM.render(
+    <React.Fragment>
+
+    <h1>My name is Mukund Dasari</h1>  
+    <p>Current Date  is {`${d.toLocaleDateString()}`}</p>
+    <p>Current time is {`${d.toLocaleTimeString()}`}</p>
+    <a href=''></a>   //Same like html we can pass attribute in JSX
+    </React.Fragment>
+    
+    
+    ,document.getElementById('root'));
+
+
+Rules:
+------
+
+1) The attribute name should be came caing 
+
+example
+
+ <h1 contentEditable='true'>My name is Mukund Dasari</h1>  
+
+2) slef closing tag:Use self closing tag if ther is no child tag or content.
+
+<img src='https://picsum.photos/200/300'/>

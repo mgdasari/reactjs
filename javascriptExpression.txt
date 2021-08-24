@@ -1,0 +1,62 @@
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+let flname = 'mukund dasari'
+
+ReactDOM.render(
+  <h1>Hi myname in name is flname</h1>
+  
+  ,document.getElementById('root'));
+
+
+
+Here in the index.js file we are using JSX element. But if you want to do some javascript in JSX then you have to use JSX expression.
+
+you just have to add {} and do the javascript in the curly braces.
+
+Below is the example.
+
+Example1:
+---------
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+let flname = 'mukund dasari'
+
+ReactDOM.render(
+  <>
+
+  <h1>Hi myname in name is {flname }</h1>
+  </>
+  
+  ,document.getElementById('root'));
+
+
+Example2:
+----------
+
+import React from 'react'
+import ReactDOM from 'react-dom'
+
+let flname = 'mukund dasari'
+
+ReactDOM.render(
+<div>
+<h1>Hi myname in name is {flname}</h1>
+<h2>score is {Math.random()}</h2>
+<h3>Average is {100+200}</h3>
+
+</div>
+  
+  ,document.getElementById('root'));
+
+
+NOTE:
+---------
+
+In {} curly braces you can only use expression not statements.
+
+statements as in ifelse statement etc.
+
+Reffere index3.js file

@@ -1,0 +1,16 @@
+What is JSX?
+
+JSX is nothing but javascript xml
+
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+ReactDOM.render(<h1>Hello world</h1>,document.getElementByid('root'))
+
+
+Here xml like element is called as JSX.And to render this JSX you need React module.
+
+Babel convert ReactDOM.render(<h1>Hello world</h1>,document.getElementByid('root')) to 
+
+ReactDOM.render( /*#__PURE__*/React.createElement("h1", null, "Hello world"), document.getElementByid('root'));

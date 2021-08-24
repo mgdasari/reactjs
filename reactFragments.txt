@@ -1,0 +1,53 @@
+Why to use fragment?
+-----------------------
+
+1)when write document.getElementByid('root') what it actually does is it add the elements after the root element.
+
+2) But if you use <div></div> to add the elements at root .It add extra node after root.
+and in future using reflex and all create problem.
+
+
+ReactDOM.render(
+  <div>
+    <h1>hello world</h1>
+  <p>like and share</p>
+  </div>,
+  document.getElementById('root')
+);
+
+//Div "root" ke under ek or div add kar raha tha.
+
+3) So we use fragments.
+
+
+Benefits:
+------------
+
+By using fragment it will not div element after root.
+
+Always us React.fragment instead of <div></div>
+
+1) 
+ReactDOM.render(
+  <React.Fragment>
+      <h1>hello world</h1>
+      <p>like and share</p>
+      
+  </React.Fragment>
+  ,
+  document.getElementById('root')
+);
+
+
+2)
+ReactDOM.render(
+  <>
+      <h1>hello world</h1>
+      <p>like and share</p>
+      
+  </>
+  ,
+  document.getElementById('root')
+);
+
+reffere index1.js file

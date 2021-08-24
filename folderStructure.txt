@@ -1,0 +1,37 @@
+Node_module:
+--------------
+
+It have all the module required for react.
+
+Package.json:
+-------------
+
+package-lock.json.
+------------------
+
+manifest.json: It basically give information about the app in json formate.
+
+mainFile:
+---------
+
+1) index.js
+2) index.CSS
+3) 
+
+Important Point:
+-------------------
+
+var React = require('react');
+var ReactDOM = require('react-dom');
+
+ReactDOM.render('kya dikha','or kaha dikha',callback)  //render means isko dikha
+
+//This line basically show contains on web page which take argument like kya dikha and or kaha dikha
+
+ReactDOM.render(<h1>Hello world</h1>,document.getElementByid('root'))
+
+**) when you install react you get babel and webpack with that.
+
+Babel: It is used for compiling the es6 code.
+webpack: It is used to keep all the file together.
+

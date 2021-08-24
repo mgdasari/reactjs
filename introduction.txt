@@ -1,0 +1,33 @@
+Q)What is React?
+
+>> React is a javascript library which is used for building user interfaces.
+
+Q) What is React library or framework?
+>> React is library.
+
+Q) Use of react ?
+>> React is ue to create awesome UI.
+
+Q) History :
+
+>> React was developed by Facebook and it was used to news feeds.
+
+It is a open source at js conference. (COde is available at git hub)
+
+Q) Benifites of React:
+----------------------------
+
+1) Component base approach: A ui mad by react is made by lots of Component.
+2) Component are usable.
+3) It uses a DECLARATIVE APPROACHES: In these client dosenot have much about creating a UI.But technical person know how to develop.
+4) DOM update are handle very gracefully.
+
+Q) Why to use React?
+>>It has huge community on github
+
+
+Q) Pre-requities for React?
+-----------------------------
+Basic knowledge on HTML CSS and javascript
+Basic understanding of ES6
+Benifites understanding on NPM

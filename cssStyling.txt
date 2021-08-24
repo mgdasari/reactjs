@@ -1,0 +1,16 @@
+Refere index5.js and index1.css 
+
+1) Firstly we have implemented externalizing the css.
+2) Writting css in the same js file is called as internal css/inline css.
+3) In react inline css are important.
+
+
+inline
+
+1) If you want to use inline you have to use style attribute in JSX element.
+
+<h1 style=''>My name is Brownie..Say Hi 2 Me..Lots of love from me</h1>  
+
+
+
+internal
