@@ -1,0 +1,17 @@
+Functional:
+----------
+
+1) FUnction componet are made up of simmple function
+2) You should use function component as much as possible.
+3) In function there is absence of this keyword which is major differncetiator.
+4) function component are without complicate logic and responsible for UI.
+5) FUNCTIONAL COMPONET are also called as stateless/dump/presentational componet.
+
+
+Class Component:
+---------------
+1) It has more features.
+2) They can maintain there own privavte data called as state.
+3) complex UI Logic 
+4) provide lifecycle hooks.
+5) CLASS COMPONET are also called as stateful/smart/container component.

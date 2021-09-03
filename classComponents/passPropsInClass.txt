@@ -1,0 +1,25 @@
+App.jsx
+--------------
+
+import React, { Component } from 'react'
+import Welcome from './Welcome'
+
+class App extends Component{
+    render(){
+        return(<Welcome name='mukund'/>)
+    }
+}
+
+export default App;
+
+Welcome.jsx:
+-----------
+import React, { Component } from 'react'
+
+class Welcome extends Component{
+    render(){
+        return(<h1>Class Component {this.props.name}</h1>);
+    }
+}
+
+export default Welcome;

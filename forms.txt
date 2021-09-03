@@ -1,0 +1,11 @@
+What is the purpose of forms?
+
+>> The main purpose of the forms is to extract data and send to backend.
+
+What are controlled component?
+------------------------------
+
+>>An input form element whose value is controlled by React in this way is called as controlled component.
+
+
+To take input we have onchange event .

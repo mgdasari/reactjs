@@ -1,0 +1,9 @@
+If you want to do something like this
+
+1) after click background changes
+2)after hover the bckground changes
+
+
+And for this you must know about hooks.
+
+reffers app_event.jsx file

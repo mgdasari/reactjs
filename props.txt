@@ -1,0 +1,132 @@
+Reffer index8.js
+
+
+Props stands for properties.
+--------------------------------
+
+React props are like function arguments in javascript and attribute in HTML.
+
+How to pass props:
+-----------------
+
+React.DOM(
+    <>
+    <App1 
+    
+    imgsrc='https://abcd.com'
+    title='title for component'
+    sname='name of the componet'
+    link='https://abcd.com'
+    />
+    <App2 />
+    <App2 />
+    <\>
+    ,
+    document.getElementById('root')
+)
+
+
+How to access props in component:
+--------------------------------
+
+function App(props){
+    return(<div>
+    <H1 src={props.imgsrc}><\H1>
+    <H1>{Props.title}<\H1>
+    <H1 src={props.link}><\H1>
+    <p>{props.sname}<\p>
+    
+    <\div>)
+}
+
+export default App
+
+
+##################################################
+**) Lets take an example you have many functional component and u need to pass a props to it.Then create sdata.jsx define a array of objec and pass each object data to component.
+
+example:
+-------
+React.DOM(
+    <>
+    <App1
+    
+    imgsrc={sdata[0].imgsrc}
+    title=sdata[0].title
+    sname=sdata[0].sname
+    link=sdata[0].link
+    />
+    <App1 
+    imgsrc={sdata[1].imgsrc}
+    title=sdata[1].title
+    sname=sdata[1].sname
+    link=sdata[1].link
+    />
+    <App1 
+    imgsrc={sdata[2].imgsrc}
+    title=sdata[2].title
+    sname=sdata[2].sname
+    link=sdata[2].link
+    />
+    <\>
+    ,
+    document.getElementById('root')
+)
+
+
+Now if you want only one component to be used and still you get many component on UI then use array.map
+
+function nvale(value,index){
+return(
+<App1
+    imgsrc={value.imgsrc}
+    title=value.title
+    sname=value.sname
+    link=value.link
+    />
+);
+}
+
+
+React.DOM(
+    <>
+    <h1 className='headingforcss'>list of 5 netflix series</h1>
+
+    {sdata.map(nvale)}
+    
+    
+    <\>
+    ,
+    document.getElementById('root')
+)
+
+
+this how with the help of setmap you can display all the array object as a componets on UI
+
+Note: whenever u use map have a unique key property in props.
+
+
+function nvale(value,index){
+return(
+<App1
+    key:{value.id}
+    imgsrc={value.imgsrc}
+    title={value.title}
+    sname={value.sname}
+    link={value.link}
+    />
+);
+}
+
+
+React.DOM(
+    <>
+    <h1 className='headingforcss'>list of 5 netflix series</h1>
+
+    {sdata.map(nvale)}
+    
+    
+    <\>
+    ,
+    document.getElementById('root')
+)

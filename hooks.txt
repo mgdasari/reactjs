@@ -1,0 +1,40 @@
+Hooks:
+---------
+
+1) Hooks was introduced in React in version 16.8
+2) It allow you to use state and other features without writting a class.
+3) It does not work inside the class.
+4) Hooks should always be used on the top level of the react function
+
+
+In class componenet we use to use state BUt in functional componenet we use hooks as a state.
+
+useState basically give us array of 2 object.
+
+1) state object 
+2) update function
+
+
+
+reffer app3.js 
+
+
+
+const App=()=>{
+  //  const state = useState();
+
+//    console.log(state); //It will throw a error it shoud be called inside the component
+    
+    const [num,setNum] = useState(0)
+    
+    function IncNum(){
+        setNum(num+1)
+    console.log('clicked');
+    }
+
+
+    return(<React.Fragment>
+        <h1 className='heading_style'>{num}</h1>
+        <button onClick={IncNum}>click me</button>
+    </React.Fragment>)
+}

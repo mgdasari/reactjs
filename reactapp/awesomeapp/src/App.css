@@ -22,3 +22,54 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+.heading_style{
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-size: 30px;
+  /* font-size: 100px; */
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-size: 2rem;
+  /* margin-bottom: 30; */
+  margin: 0px 400px;
+
+  /* margin: 250px 470px; */
+  
+
+}
+.textField{
+  margin: 10px 570px;
+}
+
+.slot_inner{
+  padding: 30px 0;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  background-color:darkslateblue;
+  font-size: 1.5rem;
+  margin-bottom: 30;
+
+}
+
+button{
+  padding: 25px 70px;
+  background-color: grey;
+  color: aliceblue;
+  border: 2px solid steelblue;
+  outline: none;
+  border-radius: 15px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin: 10px 570px;
+}
+
+*{
+  background-color:darkseagreen;
+}

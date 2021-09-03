@@ -1,0 +1,24 @@
+flow of execution:
+---------------------
+1) index.js : render app component by importing app.js
+2) app.js: 
+
+a) create app component and export it.
+b) import netflix.jsx and amazon.jsx and use netflix and amazon compnet in ternary operator.
+
+example:
+----------
+const favseries = 'netflix'
+
+function App(){
+    return (
+        <>
+        {(favseries==='netflix')? <netflix /> : <amazon />}
+        </>
+    )
+}
+
+export default App;
+
+c) In netflix.jsx and amazon.jsx import card.js and pass props arguments.
+d) In cards.jsx use jsx and css to hahve look and feel.

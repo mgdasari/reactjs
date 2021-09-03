@@ -1,0 +1,34 @@
+What is class component?
+
+>> class component is basically a es6 class which can take externally input as props and give output as jsx.And it maintain its internal state.
+
+Below is simple step to create class component.
+--------------------------------------------------
+
+import React, { Component } from 'react'
+
+class Welcome extends Component{
+    render(){
+        return(<h1>Class Component</h1>);
+    }
+}
+
+export default Welcome;
+
+Below is the simple step to create function component.
+--------------------------------------------------------
+import React from 'react'
+
+
+function OrderList(){
+    return(
+        <ol>
+            <li>Mukund</li>
+            <li>dasari</li>
+            <li>Govindu</li>
+            <li>Amma</li>
+        </ol>
+    )
+}
+
+export default OrderList;
