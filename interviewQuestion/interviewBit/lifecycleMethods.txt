@@ -1,0 +1,48 @@
+https://www.interviewbit.com/react-interview-questions/
+
+What is life cycle methods?
+
+>>
+1) Each componenet has a life cycle methods.WHich you can override to run a code at a particular time.
+2) Life cycle methods are the method which are run throught the life of the component
+
+Phases of component:
+--------------------
+
+1) Mounting
+2) Updating
+3) Error handling
+4) Unmounting
+
+Out off which 1,2,4 are important.
+
+1) Mounting:
+------------
+It is the phase in which element is created and inserted inside the DOM.
+
+Create hone se leke DOM mein insert hone tak Mounting phase bolenge and Usmein CONSTRUCTOR,getDerivedStateFromProps,render,componentDidMount method use hota hn.
+
+Phase of Mounting:
+-------------------
+1) Initialization of Component.
+2) ComponentWillMount
+3) render
+4) componentDidMount
+
+
+2) UpdatingComponet:
+---------------------
+
+Phases:
+----------
+1) ComponentWillRecieveProps
+2) ComponentShouldMount
+3) If yes ComponentWillMount No then ComponentWillNotMount
+4) render
+5) componentDidMount
+
+3) Unmounting:
+-----------
+Phases:
+------
+ComponentWillMount

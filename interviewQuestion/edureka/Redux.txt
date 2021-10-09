@@ -1,0 +1,67 @@
+Q) Redux:
+
+>> Redux is basically a library which governs the flow of the data in unidirectional.
+
+Q) How redux works?
+>> To understand this lets discuss and example.
+
+If people want to change any law they have to do below things.
+
+1) people
+2) protest
+3) law
+4) minster
+5) propose in parlianment
+6) Update to news channels
+7) From news channel it get back to people for follow.
+
+Same way redux also work in same  flow.
+
+1) component
+2) dispatch the changes
+3) actions
+4) Reducers,It can be one or many
+5) central store
+6) trigger,subscription,passes updated state as propose
+7) back to component
+
+https://www.youtube.com/watch?v=np8A_aW7Pew
+
+Q) What are the 3 principle that redux follow?
+
+>>First principle (Single source of truth:):
+-----------------------------------------------
+The state of whole aplication is stored in one object within store object.
+
+Second principle (state is read-only:):
+----------------------------------------
+The only way to change the state is emit an action describing what is a change.
+
+If you want to update the state of ur application you need to know the redux with an action.You can do it directly.
+
+Third principle (Changes are made with pure functions:):
+----------------------------------------------------------
+
+How the state is transformed by action is governed by a third principle.For this you write a Reducers.
+
+Reducers is a pure function which take previousState and action as input and output  newState.
+
+https://www.youtube.com/watch?v=_KhGdZEWC4c
+
+Q) What do you understand by Single source of truth ?
+>>This means that application stores all the states of application at one point in Single object stored object.
+
+
+Q) List down the component in redux?
+>>
+1) Actions
+2) Reducers
+3) stores
+4) view
+
+Q) HOw the data flows through redux?
+>>1) whenever user want to change any thing. This intended change goes to action 
+2) Action triggers an event.
+3) The reducers get previous state from store and actionType fromm actions.
+4) It give new state which are stored in store
+5) as shown a state got changed the page is re-rendered again and display the changes.

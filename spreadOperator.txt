@@ -1,0 +1,33 @@
+/home/mukund/reactjs/reactapp/awesomeapp/src/App_spread.jsx
+
+
+Usage of spread operator.
+
+1) YOu can concate 2 array
+-----------------------------
+
+let arry1=['mukund','dasari']
+
+let biodata =[1,..arry1,24,'male']
+
+output:
+--------
+(2) ["mukund", "dasari"]
+(5) [1, "mukund", "dasari", 24, "male"]
+
+2) 
+
+let shootergame =['xyz','abc','dasd','erwer']
+let racingGame=['gfdgg','hghgd','vbbv','hhhg']
+
+let totalGame=[...shootergame,...racingGame]
+
+3) Destructuring:
+-----------------------------
+[first,...remaining]=[totalGame]
+
+
+Note:
+--------
+
+In hooks we have have used spread operator to convert many line into 2 lines.

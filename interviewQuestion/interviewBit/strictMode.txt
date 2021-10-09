@@ -1,0 +1,25 @@
+https://www.interviewbit.com/react-interview-questions/
+
+StrictMode was added in react 16.3 version.It is tool with help of which reactjs highlight the application potential problem.
+2) To enable STRICT MODE you need to add the <React.StrictMode></React.StrictMode> tag.
+Example:
+-----------
+
+import React from "react";
+import ReactDOM from "react-dom";
+
+import App from "./App";
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(
+ <React.StrictMode>
+   <App />
+ </React.StrictMode>,
+ rootElement
+);
+
+
+StrictMode helps in below issues:
+----------------------------------
+1) Identifying a componet with unsafe life cycle method.
+2) Warning about the usage of findDOMNode(): If your code contain findDOMNode() as it deprecated by the react.With the use of strict mode it will show Warning.

@@ -1,0 +1,111 @@
+Q) Difference between Real DOM and virtual DOM?
+
+>>Real DOM:
+------------
+1) It update slow
+2) It directly update the HTML
+3) Create new dom if any element are updated
+4) DOM manipulation are expensive
+5) There is lot of wastage of memory.
+
+
+Virtual DOM:
+-------------
+1) It update fast.
+2) It does not update the HTML directly
+3) Doesnot create new DOM on updation of any element
+4) DOM manipulation is not expensive 
+5) There is no wastage of memory.
+
+Q) What is React?
+
+>> 
+Reactjs is front end web development library developed by FACEBOOK.
+It follow component based approach which are resuable in nature.
+It is used for devloping complex and interactive UI.
+
+Q) What are the features of React?
+
+>>
+1) It uses virtual dom instead of real dom
+2) It is uses server side rendering.
+3) It follow uni-directional data flow or data binding.
+
+Q) List major advantages of using React.js?
+>>
+1) It increases the application performance.
+2) It can be conviently used in clinet and server side.
+3) Beacuse of JSX, Code readabiliity increases.
+4) Recatjs esy to integrate with other JS framework angular,meteor.
+5) USing reactjs writing UI Test cases became extremelyy easy.
+
+Q) What is limitation o reactjs?
+>>
+1) Reactjs is just library not  full blown framework.
+2) This library is very large and not easy to understand by beginers.
+3) coding get complex as it uses inline templating.
+
+Q) What is JSX?
+-----------------
+>>
+
+JSX Stand for Javascript XML.THis file is robust and boost the application performance.
+
+example:
+--------
+function App(){
+render(){
+    return(<h1>Hello</h1>)
+}}
+
+export default App
+
+
+Q) What do u understand by virtual dom?
+
+>> 
+1) virtual dom is virtual representation of real dom.
+2) whenever there is change in code the virtul dom is re-rendered
+3) The virtual dom has 2 state previous state and current.
+4) so the difference between the state are synced with real dom.
+
+
+Q) Why JSX is not understood bt browser?
+>>JSX is a javascript xml it not a proper javascript object which can be understood by  browser.
+So you need babel which convert JSX to javascript object which can then understood by browser.
+
+Q) How different es6 is different fron es5?
+
+>>require vs import:
+-------------------
+
+var React = require('react');
+import React from 'react';
+
+export vs exports
+-------------------
+
+module.exports = component
+export default component
+
+
+Q) How react is different then angular?
+
+>>
+
+React:
+--------
+
+1) It use only view of mvc
+2) uses virtual dom
+3) one way data binding
+4) server side rendering
+5) DEvelope by FACEBOOK
+
+ANgular:
+---------
+1) it is uses complete mvc
+2) uses real dom
+3) two way of data binding
+4) clinet and server side rendering
+5) DEveloped by google

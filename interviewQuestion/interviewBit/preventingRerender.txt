@@ -1,0 +1,70 @@
+https://www.interviewbit.com/react-interview-questions/
+
+Whenever a state and props are changed the rendering of component and its child componet happens.This affect the performance of application.
+
+Consider a below code.
+-------------------------
+
+import React from 'react'
+class App extends React.Component {
+  state = { messageDisplayed: false };
+  componentDidMount() {
+    this.setState({ messageDisplayed: true });
+  }
+ 
+  render() {
+    console.log("Parent is getting rendered");
+    return (
+      <div className="App">
+        <Message />
+      </div>
+    );
+  }
+ }
+ 
+ class Message extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { message: "Hello, this is vivek" };
+  }  
+  render() {
+    console.log("Message is getting rendered");
+    return (
+      <div>
+        <p>{this.state.message}</p>
+      </div>
+    );
+  }
+ }
+ export default App;
+
+ Output :
+ ----------
+Parent is getting rendered
+Message is getting rendered
+Parent is getting rendered
+Message is getting rendered
+
+To prevent the re-render of child componet we use shouldComponentUpdate() method.
+
+
+class Message extends React.Component {
+ constructor(props) {
+   super(props);
+   this.state = { message: "Hello, this is vivek" };
+ }
+ shouldComponentUpdate() {
+   console.log("Does not get rendered");
+   return false;
+ }
+ render() {
+   console.log("Message is getting rendered");
+   return (
+     <div>
+       <p>{this.state.message}</p>
+     </div>
+   );
+ }
+}
+
+AS you can see the shouldComponentUpdate should return false.

@@ -1,0 +1,27 @@
+https://www.interviewbit.com/react-interview-questions/
+
+Q) what are hooks?
+---------------
+>>
+
+Hooks are the functions which help us to hook into the react state and life cycle feature from a functional component.
+
+React hooks can not be use in class component.They let us write component without class.
+
+Q) Why were hooks introduced in React.js?
+------------------------------------------
+>>React hooks was introduced in v16.8 of react.
+
+Earlier functional component was called as stateles component.But if we wanted to manage state then class component was required.
+
+This wat led to introduction of hooks.
+
+EXAMPLE of hooks:
+------------------
+useState.
+
+with help of useState we manage state in functional component.
+
+function Person(props){
+    cont [name,setName] = useState()
+}

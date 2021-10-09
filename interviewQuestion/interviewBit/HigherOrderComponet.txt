@@ -1,0 +1,9 @@
+https://www.interviewbit.com/react-interview-questions/
+
+Q) what are higher order component?
+
+>>Higher order component are the component which take in component and return new component.
+
+Q) When do we need HOC?
+
+>>While developing a application there are case where we want to develop a component similar to other componet with minute changes.

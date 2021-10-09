@@ -1,0 +1,98 @@
+Q) Is everything in react is component ?
+>> component are the building blocks of the react. Entire UI is splitted into independent component.
+Each independent componet are rendered independently without affecting the UI.
+
+Q) What is the purpose of render()?
+>>
+1) render() method basically returns a react element which is a representation of the native DOM.
+2) Each componet must have render method.
+3) If you have a multiple element in component then you need to group with enclosing tag like <form>,<group>,<div>
+
+Q) How can you embed 2-3 more component?
+>>
+class MyComponent extends React.Component{
+    render(){
+        return(          
+             
+<div>               
+<h1>Hello</h1>
+                <Header/>
+            </div>
+ 
+        );
+    }
+}
+class Header extends React.Component{
+    render(){
+        return
+ 
+<h1>Header Component</h1>
+   
+   };
+}
+ReactDOM.render(
+    <MyComponent/>, document.getElementById('content')
+);
+
+Q) What are props?
+>>
+1) props are the properties in react.If you want to send properties to any component you use props.
+2) props are immutable.
+3) They are always passed from parents to child component.A child component can not send props back to parent component.
+
+Q) What is state ?
+>>1) States are basically heart of the reactjs
+2) states are mutuable.
+3) states are the source of the data which can determine component behaviour and rendering.
+4) They are accessed via this.state
+
+Q) Difference between states and props?
+>>                                                         state         props
+Receive initial value from parent component                 yes          yes
+parent component can change value                           no           yes
+set default values inside the component                     yes         yes
+changes inside the component                                yes         no
+set initial value for child component                       yes         yes
+
+Q) How can u update the state of component?
+>>By this.state method
+
+Q) What are the arrow funtion in React ?
+>> Arrow function allow to bind a context of the component properly.
+
+without arrow function:
+-----------------------
+render(){
+    return <h1 onchange={this.handleChange.bind(this)}/>
+}
+with arrow function:
+--------------------------
+render(){
+    return <h1 onchange={(e)=>{this.handleChange(e)}}/>
+}
+
+
+Q) Difference between statefull and stateless component?
+>>
+Statefull Component:
+------------------------
+
+1) It stores the information about the states inside the memory.
+2) Have authority to change the state
+3) contains the knowledge of current, past and future states.
+4) stateless component notify them about the requirement of state changes.
+
+Stateless Component:
+---------------------
+1) calculate the internal state of the component.
+2) Do not have the authority to change the state.
+3) contains no knowledge of past current and future states.
+4) They receive the props from statefull component and treat them as a callback.
+
+Q) What are different phases of component?
+
+>>1) initial phases:This phase is when component start its journey and make it way towards DOM
+
+2) updating phase: Once the Component is added to the DOM.It can potentially update and re-render when props and state get changed.That happens in this phase.
+
+3) Unmounting:This is the final phase of the component in which it is destroyed.

@@ -1,0 +1,72 @@
+Q) Explain the life cycle method of react  component?
+
+>> Below are the main methods called in life cycle of react component.
+
+1)componentWillMount: This method is called just before the redering take place at client and server side.
+2)componentDidMount:This method is called after rendering  take place at clinet side
+3)componentWillUpdate:This method is called jsut before rendering take in componentDidMount
+4)componentDidUpdate:This method is called after render take in DOM.
+5)componetShouldRecieveProps:This method is called when component recieve props
+6)shouldComponentUpdate:This method by default returns false.But if you want to uodate the component the return true otherwise return false.
+7)componentWillUnmount:This final method where component is unmounted from DOM.
+
+Q) What are the event in react.js?
+>>Event in reactjs are reaction to specific actions like mouse hover,mouse click.Handling event are similar to handling event in DOM.But there are some synthetical difference.
+
+1) Events are named using camelCasing instead of using lower case.
+2) Event are passed as a functions instead of string.
+
+Q) How do you create event in Reactjs?
+>>class Display extends React.Component({
+    show(evt){code for show method}
+    render(){
+        return(
+            <div onClick={this.show}>show me</div>
+        )
+    }
+})
+
+
+Q) What is refs in react.js?
+>>refs is called a refference. It is an attribute use to store the refference to a element or component.It return a element when a component is rendered.
+
+Q) What is the usecase of refs?
+>>1) when you want to focus on a particular content,select text or media
+2) To trigger imperative animation.
+3) Integrate with third party DOM.
+
+Q) How do u modularize the code in react.js?
+>>We can modularize the code by import and export properties.They help in writing the component seperatly in different file.
+
+Q) How forms are created in reactjs?
+>>Form creation is same as HTML.The state contained state properties and is updated via setSTATE().Thus the element dont have access directly access to state and there submission is handle by javascript function.
+
+Q) What are difference between controlled and uncntrolled component?
+>> controlled component:
+----------------------------
+1) They do not maintain there own state,
+2) Data is controlled by parent component
+3) They take in current value from props and notify via a callback.
+
+
+uncntrolled component:
+------------------------
+1) They maintain there own state.
+2) Data is controlled by a DOM.
+3) Ref is used to access current value.
+
+Q) What are HOC?
+>>Higer order componet are the custome componet that wrap the another componet.They can accept the dynamically the componet nut dont change the there functionality.
+
+HOC is a pure componet.
+
+Q) What can you do with HOC?
+>>CODE REUSE,PROPS manipulation.
+
+Q)What are keys in reactjs?
+>>Key are basically a unique number. It is used to identify the unique virtual DOM element. With the use of this it inccrease a application performance.
+
+Q) What was the major problem with MVC?
+>>>1) DOM manipulation was very expensive.
+2) Application was slow and inefficient.
+3) There was huge memory wastage.

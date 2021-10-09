@@ -1,0 +1,70 @@
+https://www.interviewbit.com/react-interview-questions/
+
+Props:
+-----
+1) It is immutable
+2) It has better performance.
+3) can be passed to child component.
+
+
+States:
+----------
+1) Owned by it own component.
+2) Locally scoped
+3) writeable/readable.
+4) has setState methods to modify propeerties
+5) can only be passed as props.
+
+##############################################
+
+1) Every componet in react has a bilt in state object.Which contain all the property that belong to componet.
+2) Any changes in the state propert value re render the component.
+
+States example.
+---------------
+
+class car extends componet{
+    constructor(props){
+        super(props);
+        this.state={
+            brand: "BMW",
+            color: "black"
+        }
+    }
+}
+
+How to use and update the state object?
+---------------------------------------------
+class car extends component{
+    constructor(props){
+        super(props);
+        this.state={
+            brand: "BMW",
+            color: "black"
+        }
+
+    }
+ 
+changeColor(){
+    this.setState((preValue)=>{
+        return(color:'Red')
+    })
+}
+render(){
+    return(<div>
+        <button onClick={()=>{this.changeColor()}}></button>
+        <P>{this.state.color}</P>
+    
+    </div>);
+}
+}
+
+
+***)State object is not avilable in functional componet.In functional component we have hooks.
+
+
+In functional component using hooks
+-----------------------------------
+function Car(props) {
+ let [brand, setBrand] = useState(props.brand);
+}

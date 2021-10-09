@@ -1,0 +1,64 @@
+https://www.interviewbit.com/react-interview-questions/
+
+Q) What are props?
+
+>>Props are way by which we can send data from parent to child component.
+
+Consider an example:
+----------------------
+Q) How to pass a props from parents:
+---------------------------------------
+
+import ChildComponent from "./Child";
+
+    function ParentComponent(props) {
+     let [counter, setCounter] = useState(0);
+    
+     let increment = () => setCounter(++counter);
+    
+     return (
+       <div>
+         <button onClick={increment}>Increment Counter</button>
+         <ChildComponent counterValue={counter} />
+       </div>
+     );
+    }
+ 
+As you can see, ChildComponent is child component and we are passing prop counterValue with value counter.
+
+Q) How to use the prop passed by parent component inside a child component.
+----------------------------------------------------------------------------
+
+function ChildComponent(props){
+    return(
+        <h1>{props.counterValue}</h1>
+    );
+}
+
+#################################################################
+
+Q) How to pass props from child to parent?
+--------------------------------------------------
+1) pass a function as a callback in props to child component.
+2) Use this callback function in child component to set the variable of parent component
+
+In parent component below are the changes:
+-------------------------------------------
+
+function Parent(){
+    const [counter,setcounter]=useState(0);
+    let callback = valueFromChild =>{setcounter(valueFromChild)};
+    return(
+        <ChildComponent callBackFun={callback} counterValue={counter}/>
+    );
+}
+
+In child component below are the changes:
+-----------------------------------------------
+
+function ChildComponent(props){
+    let childCounterValue= props.counter;
+    return(
+        <button onClick= {()=>props.callBackFun(++childCounterValue)} />
+    )
+}

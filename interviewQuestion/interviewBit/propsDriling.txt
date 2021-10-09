@@ -1,0 +1,14 @@
+https://www.interviewbit.com/react-interview-questions/
+
+1) Sometime while developing an application there is need to passing data from component in higher hierarchy to the component which are deeply nested.
+
+2) To pass data we pass data from source component and keep passing the props to the next component in hierarchy till we reach the deeply nested component.
+
+3)The disadvantages of props drilling is that component which are not aware will also have access to the data.
+
+######################################################################
+
+Error Boundaries:
+--------------------
+
+Error Boundaries provide as a way to catch a error that occur in render phase.

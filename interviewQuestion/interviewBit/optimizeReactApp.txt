@@ -1,0 +1,48 @@
+https://www.interviewbit.com/react-interview-questions/
+
+There are many way you can optimize the react app.
+
+1) using useMemo():
+---------------------
+
+It is React Hooks that is used for caching CPU-extensive function.
+
+In react app sometime cpu extensive function are called repeatedly due to re-render of a component.which can lead to slow rendering.
+
+Use of useMemo hooks cache this such functions.
+
+2)using React.pureComponents:
+-----------------------------
+
+It is a base component which check states and props before updating a component.
+
+Instead of using simple ReactComponent use React.pureComponent which will reduce the unneccessary re-render of component.
+
+3) Maintaining a state colocation:
+-----------------------------------
+Having a too many state in componet can lead to unneccessary re-render ooof component.Better move all the states which are les value to parent component, to separate component.
+
+4) Lazy Loading:
+-------------------
+It is technique used to reduce the load time of react app.Lazy loading help to reduce the risk of web app performance.
+
+
+#####################################################################
+
+Q) What are keys in React.js?
+--------------------------------
+>> use Array.map()
+
+1) Avoid using a for loop
+2) give each item a unqiue keys
+3) Avoid using array index as the key.
+
+
+***) When you are dealing with list of element then keys are used.
+
+const ids=[1,2,3,4,5]
+const listElement=ids.map((id)=>{
+    return(
+        <li> key = {id.tostring()}</li>
+    )
+})

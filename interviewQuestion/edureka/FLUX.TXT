@@ -1,0 +1,16 @@
+Q) What are flux in react.js?
+>>
+1) Flux is not a library of react but it is an architechure which help in data flow i.e in unidirectional flow(from interface to view.).
+2) It was created and used by facebook.
+3) It can used by with other JS farmework.
+4) IT uses redux library to implement flux architechure.
+
+**) Flux IS architechure AND redux IS library.
+
+Q) What are important elements of flux?
+>>Flow of the data is from actions to view .
+
+Actions: Actions are sent to dispatcher to trigger a data.
+dispatcher:This is like central hub of app who has all data and sent to stores,
+stores:Stores is a place where application state and logics are held.
+view: The view recieve data from store and re-render the app.

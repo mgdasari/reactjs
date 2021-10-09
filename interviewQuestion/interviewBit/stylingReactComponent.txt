@@ -1,0 +1,52 @@
+https://www.interviewbit.com/react-interview-questions/
+
+Different way of styling a component
+--------------------------------------
+
+1) inline styling:
+------------------
+class Person extends component{
+    render(){
+        return(
+            <h1 style={{color:white},{size:12}}>Hello world</h1> //inline styling
+        )
+    }
+}
+
+2) using javascript object:
+-----------------------------
+
+class Person extends component{
+
+    headingstyle:{
+        color:white,
+        size:13
+    }
+    render(){
+        return(
+            <h1 style={this.headingstyle}>Hello world</h1> //using javascript object styling..
+        )
+    }
+}
+
+3) using CSS stylesheet:
+-------------------------
+
+import './randomComponent.css'
+
+class Person extends component{
+    render(){
+        return(
+            <h1 className=headingstyle>Hello world</h1>
+        );
+    }
+}
+
+
+In randomComponent.css file
+
+
+.headingstyle{
+    color: white
+    size:13
+}

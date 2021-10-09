@@ -1,0 +1,163 @@
+https://www.interviewbit.com/react-interview-questions/#react-advantage
+
+
+1) What are the advantages of using Reactjs?
+
+>>1) Use of virtual dom to improve efficency.
+----------------------------------------------
+a) React uses vitual dom to render the view.Each time data changes in the react app,a new virtual dom is created.creating a virtual dom is much faster than rendering a page in browser.
+
+2) Gentle learning curve:
+----------------------------
+React has a gentle learning curve compare to angular.Anyone has knowledge with javascript can learn reactjs.
+
+3) Reusable component:
+-----------------------
+>>React js is component based architechure. component are independent and Reusable
+
+
+Q) What is JSX?
+>>jsx STANDS FOR javascript XML.
+
+It allow us to write HTML code inside the javascript and place them inside the DOM without using appendChild() or createElement().
+
+**) we can create react application without using JSX.
+
+without using JSX.
+-------------------
+const text = React.createElement('p',{},'This ia a text');
+const container = React.createElement('div','{}',text);
+ReactDOM.render(container,rootElement);
+
+using JSX:
+----------
+
+const container={
+    <div>
+    <p> This is a text</p>
+    </div>
+};
+ReactDOM.render(container,rootElement)
+
+
+Q) What are the difference between a functional and class component?
+>>
+
+Before introduction of hooks functional component were called as stateless and where behond the class componet in feature wise.
+
+But after hooks functional component are same as class component.
+
+Below are the differences:
+---------------------------
+1) Syntax:
+----------
+
+a) functional component are nothing but javascript function and can also be declared using arrow function or using function keyword.
+
+function card(props){
+ return(
+   <div className="main-container">
+     <h2>Title of the card</h2>
+   </div>
+ )
+}
+
+const card = (props) =>{
+ return(
+   <div className="main-container">
+     <h2>Title of the card</h2>
+   </div>
+ )
+}
+
+b) class component on other declared using es6 class.
+
+class Card extends component{
+    constructor(props){
+        super(props)
+    }
+    render(){
+        return(
+            <div className="main-container">
+     <h2>Title of the card</h2>
+   </div>
+        )
+    }
+}
+
+2) Handling props:
+-------------------
+
+a) functional programing:
+----------------------------
+
+<StudentInfo name='mukund'/>
+
+function StudentInfo(props){
+    return(
+        <div>
+        <h2> props.name <h2/>
+        </div>
+    )
+}
+
+b) class programing:
+----------------------
+class StudentInfo extends component {
+constructor(props){
+    super(props)
+}
+render(){
+    return(
+        <div>
+        <h2> this.props.name <h2/>
+        </div>
+    );
+}
+}
+
+3) Handling states:
+---------------------
+a) functional component:
+-------------------------
+
+function ClassRoom(props){
+ let [studentsCount,setStudentsCount] = useState(0);
+
+ const addStudent = () => {
+   setStudentsCount(++studentsCount);
+ }
+ return(
+   <div>
+     <p>Number of students in class room: {studentsCount}</p>
+     <button onClick={addStudent}>Add Student</button>
+   </div>
+ )
+}
+
+b) class component:
+-----------------------
+
+class ClassRoom extends React.Component{
+          constructor(props){
+            super(props);
+            this.state = {studentsCount : 0};
+         
+            this.addStudent = this.addStudent.bind(this);
+          }
+         
+          addStudent(){
+            this.setState((prevState)=>{
+              return {studentsCount: prevState.studentsCount++}
+            });
+          }
+         
+          render(){
+            return(
+              <div>
+                <p>Number of students in class room: {this.state.studentsCount}</p>
+                <button onClick={this.addStudent}>Add Student</button>
+              </div>
+            )
+          }
+         }

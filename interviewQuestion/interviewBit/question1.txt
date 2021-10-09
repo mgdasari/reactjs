@@ -1,0 +1,58 @@
+https://www.interviewbit.com/react-interview-questions/#react-advantage
+
+
+Q) What is virtual dom?
+>>Virtual dom is a concept where virtual representation of dom is kept inside the memory.And it is synced by a actual dom by a library called as ReactDom.
+
+Q) Why was virtual dom introduced?
+
+>>
+1) DOM manipulation is integratl part of any application and it is quite slow when compared to other javascript operation.
+2) For a small change also eniter DOM Need to be updated.
+
+Q) how does virtual dom works?
+-------------------------------
+>>
+1) In react we have virtual dom and real dom.
+2) The only difference is that all the changes are made to virtual before made to real dom.
+3) The virtual dom has 2 vitual dom. One maintain the cirrent state and other main revious state.
+4) So when the virtual dom is update the different between 2 virtual dom give the update changes and that difference is made to real dom using a library ReactDOM.
+
+Q) difference between controlled and uncontrolled component?
+
+>>controlled and uncontrolled are different approach for handling input in reactjs
+
+controlled component:
+-----------------------
+1) In controlled component the value of input element is controlled by React.
+2) we store the state of input element inside the code, and by using event based callback any changes made to input element will be refelect to code.So whenever a user eneter a data in input element the onchange method is triggered and that data is available for processing.
+3)
+
+function FormValidation(props) {
+ let [inputValue, setInputValue] = useState("");
+
+ let updateInput = e => {
+   setInputValue(e.target.value);
+ };
+
+ return (
+   <div>
+     <form>
+       <input type="text" value={inputValue} onChange={updateInput} />
+     </form>
+   </div>
+ );
+}
+
+
+uncontrolled component:
+------------------------
+1) In uncontrolled component the value of input element is controlled by dom.
+2) The state of input element is handled by dom.
+3) whenever user enter the data, it shown directly.To access this data we use ref 
+
+The only difference betwen 
+
+With controlled component you can do processing based on state.
+
+With uncontrolled component you can not do processing based on state.
