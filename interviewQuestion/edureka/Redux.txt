@@ -65,3 +65,78 @@ Q) HOw the data flows through redux?
 3) The reducers get previous state from store and actionType fromm actions.
 4) It give new state which are stored in store
 5) as shown a state got changed the page is re-rendered again and display the changes.
+
+Q) How are the action defined in Redux?
+>>Actions in React must have type properties that indicate type of action.They must be defined as string constant. In redux action are created using function called Action creator.
+
+function addto(){
+    return {
+        type: add_too,
+    }
+}
+
+Q) Explain the role of reducer?
+>> Reducer basically takes the previous state and action as input and based on it, it changes the state. And store the states in stores.
+
+Q) What is the significance of stores?
+>>A store is javaScript object which can hold the application state and provide helper method to access the states.
+
+Q) Difference between Redux and flux  ?
+>>Flux : 
+----------
+1) The stores contain store and change logic 
+2) There are multiple stores
+3) All stores are disconnected and flat
+4) React component subscribes to the stores.
+5) State is mutable.
+
+Redux:
+------
+1) The store and change logics are different
+2) There are single stores
+3) Single stores with hierarical reducers
+4) container component utilize connect
+5) state is immutable.
+
+
+Q) what are the advantage of redux?
+
+>>
+1) predictability of outcome: There is always one source of truth.There is no confusion about how to sync current state with action.
+2) Maintability: The code become easy to maintain with predictable outcome and strict structure.
+3) server side rendering: The store created at the server side need to pass to client. This is very useful for initial rendering.
+4) Ease of testing: As redux have function which are small,pure  and isolated. This make code testable and independent.
+5)Organization: Redux is preciese in code organization, THis make code more consistent and easier when team wok on it..
+
+Q) What is reacter router?
+>>
+1) Reacter router is a powerful library which is built on the top of react.Which helps in adding new screen and flows to the application.
+2) This keep the url in sync with the data thats being displayed on the web page.
+3) It is used for developing single page web application.
+4) Reacter router has a simple API's.
+
+
+Q) Why do we need switch keyword in reacter router?
+>>
+1) THe switch key is used when you want to render only one route instead of many mentioned routes.
+2) If you mention several routes and if any one matches it will bypass the remaning ones.
+
+Q) Why do we need router in react?
+>>
+1) A router is used to defined multiple routes and when user type a url, if this url matches.The user is redirect to the specific web page. 
+2) so basically we need to add the multiple route with each leading to unique view.
+
+Q) How is react router different then conventional routing.
+>>
+conventional routing:
+-----------------------
+
+1) Each view correspond to new file.
+2) A http request is sent to server and corresponding page is received.
+3) User actually navigates across the different pages for each view.
+
+reacter router:
+-----------------
+1) only single html page is involved.
+2) only the history attribute is changed.
+3) User is duped thinking he is navigating across different pages.
